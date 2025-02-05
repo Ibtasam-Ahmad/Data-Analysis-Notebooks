@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contract Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #447a6d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 70px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding-right: -10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* display: flex; */
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Smart Contract Prediction</h1>
+        <form id="predictionForm">
+            <label for="code_snippet">Code Snippet:</label>
+            <input type="text" id="code_snippet" name="code_snippet" required>
+
+            <label for="function_call_patterns">Function Call Patterns:</label>
+            <input type="text" id="function_call_patterns" name="function_call_patterns" required>
+
+            <label for="control_flow_graph">Control Flow Graph:</label>
+            <input type="text" id="control_flow_graph" name="control_flow_graph" required>
+
+            <label for="opcode_sequence">Opcode Sequence:</label>
+            <input type="text" id="opcode_sequence" name="opcode_sequence" required>
+
+            <button type="submit">Get Prediction</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('predictionForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                code_snippet: document.getElementById('code_snippet').value,
+                function_call_patterns: document.getElementById('function_call_patterns').value,
+                control_flow_graph: document.getElementById('control_flow_graph').value,
+                opcode_sequence: document.getElementById('opcode_sequence').value
+            };
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/predict/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Prediction failed');
+                }
+
+                const data = await response.json();
+
+                const rfResult = data.RandomForest;
+                const svmResult = data.SVM;
+                const gbResult = data.GradientBoosting;
+
+                const getPredictionLabel = (result) => {
+                    if (result === 0) {
+                        return "Secure Contract";
+                    } else if (result === 1) {
+                        return "Insecure Contract";
+                    } else {
+                        return "Unable to make the prediction";
+                    }
+                };
+
+                resultDiv.innerHTML = `
+                    <strong>Predictions:</strong><br>
+                    RandomForest: ${getPredictionLabel(rfResult)}<br>
+                    SVM: ${getPredictionLabel(svmResult)}<br>
+                    GradientBoosting: ${getPredictionLabel(gbResult)}
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<strong style="color: red;">Error:</strong> ${error.message}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
