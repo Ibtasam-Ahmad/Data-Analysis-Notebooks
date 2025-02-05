@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .result span {
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Classification</h1>
+        <input type="file" id="fileInput" />
+        <button onclick="uploadImage()">Upload and Predict</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        async function uploadImage() {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';  // Clear previous results
+
+            if (fileInput.files.length === 0) {
+                resultDiv.innerHTML = '<p class="error">Please select an image file.</p>';
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://localhost:8000/predict/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultDiv.innerHTML = `
+            <p><span>Predicted Class:</span> ${data.predicted_class}</p>
+            <p><span>Confidence:</span> ${data.confidence}</p>
+        `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
