@@ -1,0 +1,90 @@
+WARNING 2024-05-09 22:32:35,338 log 33768 8912 Bad Request: /api/product/update/12345/
+WARNING 2024-05-09 22:32:35,339 basehttp 33768 8912 "PUT /api/product/update/12345/ HTTP/1.1" 400 46
+WARNING 2024-05-09 22:32:35,379 log 33768 8912 Method Not Allowed: /api/product/update/12345/
+WARNING 2024-05-09 22:32:35,379 basehttp 33768 8912 "GET /api/product/update/12345/ HTTP/1.1" 405 5967
+WARNING 2024-05-09 22:33:07,340 log 33768 8912 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:33:07,341 basehttp 33768 8912 "GET /api/product/update/123456/ HTTP/1.1" 405 5971
+INFO 2024-05-09 22:33:10,521 basehttp 33768 8912 "OPTIONS /api/product/update/123456/ HTTP/1.1" 200 6245
+WARNING 2024-05-09 22:33:35,558 log 33768 8912 Bad Request: /api/product/update/123456/
+WARNING 2024-05-09 22:33:35,558 basehttp 33768 8912 "PUT /api/product/update/123456/ HTTP/1.1" 400 46
+WARNING 2024-05-09 22:33:35,599 log 33768 8912 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:33:35,600 basehttp 33768 8912 "GET /api/product/update/123456/ HTTP/1.1" 405 5971
+WARNING 2024-05-09 22:34:45,806 log 33768 21092 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:34:45,807 basehttp 33768 21092 "GET /api/product/update/123456/ HTTP/1.1" 405 40
+INFO 2024-05-09 22:34:51,567 basehttp 33768 21092 "PUT /api/product/update/123456/ HTTP/1.1" 200 43
+WARNING 2024-05-09 22:35:13,712 log 33768 19368 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:35:13,713 basehttp 33768 19368 "GET /api/product/update/123456/ HTTP/1.1" 405 5971
+INFO 2024-05-09 22:35:17,023 basehttp 33768 19368 "OPTIONS /api/product/update/123456/ HTTP/1.1" 200 6245
+INFO 2024-05-09 22:35:34,796 basehttp 33768 22396 "PUT /api/product/update/123456/ HTTP/1.1" 200 43
+WARNING 2024-05-09 22:35:34,840 log 33768 22396 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:35:34,841 basehttp 33768 22396 "GET /api/product/update/123456/ HTTP/1.1" 405 5971
+INFO 2024-05-09 22:35:43,631 basehttp 33768 15640 "OPTIONS /api/product/update/123456/ HTTP/1.1" 200 6245
+INFO 2024-05-09 22:36:02,638 basehttp 33768 26292 "OPTIONS /api/product/update/123456/ HTTP/1.1" 200 6245
+INFO 2024-05-09 22:36:03,278 basehttp 33768 26292 "OPTIONS /api/product/update/123456/ HTTP/1.1" 200 6245
+INFO 2024-05-09 22:36:16,025 basehttp 33768 25380 "PUT /api/product/update/123456/ HTTP/1.1" 200 43
+WARNING 2024-05-09 22:36:16,065 log 33768 25380 Method Not Allowed: /api/product/update/123456/
+WARNING 2024-05-09 22:36:16,067 basehttp 33768 25380 "GET /api/product/update/123456/ HTTP/1.1" 405 5971
+WARNING 2024-05-09 22:38:49,980 log 33768 18060 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:38:49,981 basehttp 33768 18060 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+INFO 2024-05-09 22:38:50,132 basehttp 33768 18060 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,138 basehttp 33768 6136 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,145 basehttp 33768 17360 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,148 basehttp 33768 28788 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,150 basehttp 33768 7796 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,152 basehttp 33768 15772 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,167 basehttp 33768 18060 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,170 basehttp 33768 6136 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,171 basehttp 33768 28788 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,172 basehttp 33768 7796 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:38:50,174 basehttp 33768 17360 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+WARNING 2024-05-09 22:38:54,447 log 33768 17360 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:38:54,449 basehttp 33768 17360 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+WARNING 2024-05-09 22:39:16,602 log 33768 24512 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:39:16,603 basehttp 33768 24512 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+WARNING 2024-05-09 22:39:20,974 log 33768 19472 Not Found: /api/
+WARNING 2024-05-09 22:39:20,975 basehttp 33768 19472 "GET /api/ HTTP/1.1" 404 3906
+WARNING 2024-05-09 22:39:30,287 log 33768 5164 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:39:30,287 basehttp 33768 5164 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+INFO 2024-05-09 22:39:30,366 basehttp 33768 5164 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2024-05-09 22:39:36,322 log 33768 5164 Bad Request: /api/scrape-ebay/
+WARNING 2024-05-09 22:39:36,323 basehttp 33768 5164 "POST /api/scrape-ebay/ HTTP/1.1" 400 5577
+INFO 2024-05-09 22:39:38,461 basehttp 33768 13712 "OPTIONS /api/scrape-ebay/ HTTP/1.1" 200 5865
+WARNING 2024-05-09 22:39:43,289 log 33768 13712 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:39:43,289 basehttp 33768 13712 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+INFO 2024-05-09 22:40:54,516 autoreload 15140 12436 Watching for file changes with StatReloader
+WARNING 2024-05-09 22:41:00,885 log 15140 16136 Method Not Allowed: /api/scrape-ebay/
+WARNING 2024-05-09 22:41:00,890 basehttp 15140 16136 "GET /api/scrape-ebay/ HTTP/1.1" 405 5594
+INFO 2024-05-09 22:41:17,377 basehttp 15140 24068 "OPTIONS /api/scrape-ebay/ HTTP/1.1" 200 5865
+INFO 2024-05-09 22:42:04,486 autoreload 23500 820 Watching for file changes with StatReloader
+WARNING 2024-05-09 22:42:09,195 log 23500 27692 Not Found: /api/
+WARNING 2024-05-09 22:42:09,195 basehttp 23500 27692 "GET /api/ HTTP/1.1" 404 3906
+WARNING 2024-05-09 22:45:24,316 log 23500 31308 Method Not Allowed: /api/search-and-download/
+WARNING 2024-05-09 22:45:24,317 basehttp 23500 31308 "GET /api/search-and-download/ HTTP/1.1" 405 5701
+WARNING 2024-05-09 22:45:28,550 log 23500 31308 Bad Request: /api/search-and-download/
+WARNING 2024-05-09 22:45:28,551 basehttp 23500 31308 "POST /api/search-and-download/ HTTP/1.1" 400 5684
+WARNING 2024-05-09 22:46:43,254 log 23500 25828 Method Not Allowed: /api/search-and-download/
+WARNING 2024-05-09 22:46:43,255 basehttp 23500 25828 "GET /api/search-and-download/ HTTP/1.1" 405 5701
+INFO 2024-05-09 22:46:43,353 basehttp 23500 20628 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,353 basehttp 23500 25828 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,360 basehttp 23500 31996 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,366 basehttp 23500 30956 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,367 basehttp 23500 25828 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,368 basehttp 23500 31960 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,370 basehttp 23500 20628 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,372 basehttp 23500 31996 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,374 basehttp 23500 30764 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,376 basehttp 23500 30956 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2024-05-09 22:46:43,377 basehttp 23500 25828 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+WARNING 2024-05-09 22:46:47,811 log 23500 25828 Not Found: /api/
+WARNING 2024-05-09 22:46:47,811 basehttp 23500 25828 "GET /api/ HTTP/1.1" 404 3906
+INFO 2024-05-09 22:46:58,834 basehttp 23500 27892 "GET /api/manage-image-paths HTTP/1.1" 301 0
+WARNING 2024-05-09 22:46:58,848 log 23500 23620 Method Not Allowed: /api/manage-image-paths/
+WARNING 2024-05-09 22:46:58,848 basehttp 23500 23620 "GET /api/manage-image-paths/ HTTP/1.1" 405 5657
+INFO 2024-05-09 22:47:02,179 basehttp 23500 30020 "POST /api/manage-image-paths/ HTTP/1.1" 200 5638
+WARNING 2024-05-09 22:48:19,295 log 23500 31852 Method Not Allowed: /api/manage-image-paths/
+WARNING 2024-05-09 22:48:19,296 basehttp 23500 31852 "GET /api/manage-image-paths/ HTTP/1.1" 405 5657
+WARNING 2024-05-09 22:48:22,244 log 23500 31852 Not Found: /api/
+WARNING 2024-05-09 22:48:22,246 basehttp 23500 31852 "GET /api/ HTTP/1.1" 404 3906
+WARNING 2024-05-09 22:48:22,567 log 23500 31852 Not Found: /api/
+WARNING 2024-05-09 22:48:22,567 basehttp 23500 31852 "GET /api/ HTTP/1.1" 404 3906
+INFO 2024-05-09 22:48:37,036 basehttp 23500 21656 "GET /api/predict/123456/ HTTP/1.1" 200 494
