@@ -1,0 +1,19 @@
+Unnamed: 0,Unnamed: 1
+,"1. The attached anonymised dataset includes website visitor data. It provides information on the number of visits, visitors and page interactions. In the test sheet, you will find the aggregation of this data. Based on the data in the file, create a forecast using Python for the 2014 year in cells G10448:G12403 (please change only cells marked with yellow to ensure we can check your forecast). For the forecast, you shouldn't use any external data. "
+,
+,
+,
+,
+,"2. Analyse the data provided in the file. Propose 3-5 KPIs to help quickly analyse the data and explain your forecast. For that, create a 5-slide presentation detailing your approach to solving the problem with the forecast and visualisation of the KPIs that you proposed."
+,
+,
+,
+,"Share the presentation, the workbook (or the code that contains your solution)."
+,
+,Success criteria:
+,1. Accuracy of the forecast.
+,"2. Ability to visualize data (using Python or any other tool you prefer: Excel, Power BI, Qlik…etc)."
+,3. Ability to explain the logic of your solution.
+,
+,Limitations: using or referencing any external dataset puts candidates in unequal conditions; it is not allowed and may lead to lower scores for the task.
+,Usage of LLMs is permitted for the sole purpose of showcasing your Python skills.

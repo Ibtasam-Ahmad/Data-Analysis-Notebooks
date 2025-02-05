@@ -1,0 +1,3 @@
+Validation Mean Absolute Error (MAE): 3.005641148325359
+Validation Mean Squared Error (MSE): 186.47861574162684
+Validation R-squared (R²) Score: -0.08269499900747324
